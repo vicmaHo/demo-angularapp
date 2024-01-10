@@ -1,0 +1,10 @@
+<div class="opciones">
+    <button class="btn btn-primary">Agregar</button>
+</div>
+
+
+
+<!--<app-elemento-lugar *ngfor="let lugar of lugares" />--->
+@for (lugar of lugares; track lugar.nombre) {
+    <app-elemento-lugar [item]="lugar" /> <!--indico que le mando el item de input como lugar-->
+}

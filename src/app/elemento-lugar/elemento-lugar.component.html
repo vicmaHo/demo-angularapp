@@ -1,0 +1,34 @@
+
+<div id="principal" class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{ item.imagen }}"  class="img-fluid rounded-start" alt="">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.nombre }}</h5>
+                <p class="card-text">
+                    @if (item.descripcion !== undefined) {
+                        {{item.descripcion}}
+                    } @else {
+                        No se encuentra descripcion/Información adicional de este lugar.
+                    }
+                 </p>
+                <div class="card-text">
+                    @for (categoria of item.categorias; track $index ) {
+                        <span class="badge bg-warning">{{ categoria }}</span>
+                    }
+                </div>
+                <div class="opciones">
+                    <button class="btn btn-outline-success">Visitado</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  
+
+    
+</div>
+
+

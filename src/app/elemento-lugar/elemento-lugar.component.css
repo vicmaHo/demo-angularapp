@@ -1,0 +1,19 @@
+.opciones {
+    text-align: end;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.img {
+    max-width: 300px;
+}
+
+#principal {
+    margin: 10px;
+}
