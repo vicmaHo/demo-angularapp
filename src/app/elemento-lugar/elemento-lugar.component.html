@@ -6,10 +6,14 @@
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">{{ item.nombre }}</h5>
+                <h5 class="card-title">{{ item.nombre }}
+                @if (item.visitado) {
+                    <span><i class="bi bi-star-fill"></i></span>
+                }   </h5>
                 <p class="card-text">
                     @if (item.descripcion !== undefined) {
                         {{item.descripcion}}
+                       
                     } @else {
                         No se encuentra descripcion/Información adicional de este lugar.
                     }
@@ -20,7 +24,9 @@
                     }
                 </div>
                 <div class="opciones">
-                    <button class="btn btn-outline-success">Visitado</button>
+                    @if (!item.visitado) {
+                        <button class="btn btn-outline-success" (click)="marcarVisitado()">Visitado</button>
+                    }
                 </div>
             </div>
             

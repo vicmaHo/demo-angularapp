@@ -1,10 +1,13 @@
 <div class="opciones">
-    <button class="btn btn-primary">Agregar</button>
+    <a class="btn btn-primary" routerLink="/agregar">Agregar Lugar</a>
 </div>
 
-
-
-<!--<app-elemento-lugar *ngfor="let lugar of lugares" />--->
-@for (lugar of lugares; track lugar.nombre) {
-    <app-elemento-lugar [item]="lugar" /> <!--indico que le mando el item de input como lugar-->
+@if (lugares.length === 0) {
+    <h4>No hay lugares guardados en este momento...</h4>
+} @else {
+    <!--<app-elemento-lugar *ngfor="let lugar of lugares" />--->
+    @for (lugar of lugares; track lugar.nombre) {
+        <app-elemento-lugar [item]="lugar" (cambioItem)="itemCambio($event)"/> <!--indico que le mando el item de input como lugar-->
+    }
 }
+

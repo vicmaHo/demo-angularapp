@@ -3,6 +3,7 @@ export interface Lugar {
     nombre: string;
     imagen: string;
     descripcion?: string; //? indica que este campo es opcional
-    categorias: string[];
+    categorias: string[],
+    visitado: boolean
 }
 

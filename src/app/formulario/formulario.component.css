@@ -1,0 +1,12 @@
+.botones {
+    text-align: end;
+}
+
+/* #btn-agregar {
+    margin-right: 5px;
+} */
+
+.form-add-place {
+    max-width: 60%;
+    margin: auto;
+}
